@@ -1,0 +1,39 @@
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Fundamentals of Smart Antenna}
+\lhead{Chapter 2}
+\lfoot{\footnotesize{MES COE, B.E. COMPUTER YEAR 2021-22}}
+\rfoot{\thepage}
+\chapter{Fundamentals of Smart Antenna}
+
+\section{Introduction}
+The term \enquote{smart} refers to the antenna array system that can adapt its radiation pattern according to the need of the user based on a particular criteria. This is done by multiplying each antenna element output by the complex weight that is present in smart antenna system. The complex weight is obtained in many different ways, needs to be adaptive in nature. The adaptation can be achieved when the array is transmitting and receiving \cite{ADR1}.
+
+\section{Smart Antenna}
+
+Smart Antenna systems provide number of significant advantages in wireless communications systems. These include reducing multipath fading, increasing system capacity, increased frequency reuse, sidelobe canceling or null steering, instantaneous tracking of moving sources and the range of a base station. The main functions of smart antennas are: estimation of direction of arrival (DOA) and  beamforming. Algorithms like Capon, MUSIC, ESPRIT, etc. are used for estimating the DOA\cite{ADR1}.
+
+
+\begin{table}
+\begin{center}{\bf \caption{Beamforming Performance Criterion}}
+\vspace{1cm}
+\begin{tabular}{ |c|c|c| }
+\hline
+Criterion & No. & Performance \\ \hline 
+A & 0 & 55 \\ \hline
+B & 1 &  64 \\ \hline
+ C& 2 & 47  \\ \hline
+ D& 3 & 41 \\
+\hline
+\end{tabular} 
+
+\end{center}
+\end{table}
+
+
+
+
+
+\section{Beamforming}
+
+The fixed beamforimng algorithm works if the noise and direction of arrival of the desired signals and the interference signals in the environment is not changing. However in practice these may not appear always, so the task of adaptive Beamforming is to estimate the optimal weights for the antenna array system for a rapidly changing environment of channel and DOA. Adaptive Beamforming algorithms have to iteratively estimate the optimum weights to the antenna array system and adapt to the changing signal directions and noise channel states \cite{ADR7}. 

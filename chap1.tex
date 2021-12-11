@@ -1,0 +1,43 @@
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Introduction}
+\lhead{Chapter 1}
+\lfoot{\footnotesize{MES COE, B.E. COMPUTER YEAR 2021-22}}
+\rfoot{\thepage}
+
+
+\chapter{Introduction}
+
+
+\section{Types}
+Following are the different adaptive antenna algorithms \cite{ADR1}:
+\begin{enumerate}
+\item Least Mean Squares Algorithm. 
+\item Sample Matrix Inversion Algorithm.
+\item Recursive Least Square Algorithm.
+\item Conjugate gradient method.
+\item Constant Modulus Algorithm.
+\end{enumerate}
+
+\section{Background}
+
+Adaptive Beamforming is a technique in which an array of antennas is exploited to achieve maximum reception in a specified direction by estimating the signal arrival from a desired direction (in the presence of noise) while signals of the same frequency from other directions are rejected.\\
+The beamformer array output is given by, 
+\begin{equation*}
+y(t)= w^{H}\;x(t)
+\end{equation*}
+the optimum solution for the weight $w_{opt}$ is given by,\\
+\begin{equation*}
+w_{opt} = R^{-1}\;r
+\end{equation*}
+where,\; $r = E{[d^*(t)x(t)]}$ is the cross-correlation matrix between the desired signal
+and the received signal,\; $R = E[x(t)x^{H}(t)]$ is the auto-correlation matrix of the received signal also known as the covariance matrix.
+
+
+\section{Objectives}
+\begin{itemize}
+  \item Formulating the equation of the algorithm.
+  \item Algorithm Analysis.
+  \item Simulation using MATLAB.
+\end{itemize}
+

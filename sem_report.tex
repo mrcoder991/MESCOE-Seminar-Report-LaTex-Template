@@ -1,0 +1,102 @@
+%mine
+\documentclass[12pt,openright,a4paper]{report}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{amsmath,amsbsy,amssymb,amsopn}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{times}      % times new roman font
+\usepackage{fancyhdr}  % Headers and footers
+\usepackage[autostyle]{csquotes}% to get double quotes
+\usepackage{multirow}
+
+
+%%%%%%%%%%%%%% To set the page dimension  %%%%%%%%%%%%%%%%%%
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\textheight}{9.6in} \setlength{\textwidth}{6.4in}
+\addtolength{\leftmargin}{-0.3in} \topmargin -.1in
+\pagenumbering{}
+\addtolength{\topmargin}{-0.5in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+
+\begin{document}
+\input{my_title}              % input the file my_title.tex           
+\newpage
+\pagestyle{empty}        %No page number displayed on the pages
+\pagestyle{plain}           %To display the page numbers on the pages.
+\pagenumbering{roman}
+\input{my_certf}
+\addcontentsline{toc}{chapter}{Certificate}
+\newpage
+
+\input{my_Decl}
+\addcontentsline{toc}{chapter}{Declaration}
+\newpage
+\input{my_ack}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\newpage
+\input{my_abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addcontentsline{toc}{chapter}{Table Of Contents}
+\tableofcontents
+
+%%%%%%%%%%%%%%%%
+\listoffigures
+\addcontentsline{toc}{chapter}{List of Figures}
+%%%%%%%%%%%%%%%
+\listoftables
+\addcontentsline{toc}{chapter}{List of Tables}
+%%%%%%%%%%%%%%%%
+
+
+%Start with the thesis and for this we have to number the page in Arabic numeral, so again need to use pagestyle and pagenumbering.
+
+\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+\include{chap1}
+\include{chap2}
+\include{chap3}
+\include{chap4}
+\include{chap5}
+\addcontentsline{toc}{chapter}{References}
+
+%%%%%%%%%%%%%  Headers and footers %%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{References}
+\lfoot{\footnotesize{MES COE, B.E. COMPUTER YEAR 2018-19}}
+\rfoot{\thepage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\bibname}{References} % to write references instead of  bibliography in latex
+
+\begin{thebibliography}{31}
+\vspace{-0.6cm}
+
+\bibitem{ADR1}
+F. Gross, {\it Smart Antennas For Wireless Communication}, Mcgraw hill,
+September 14, 2005.
+
+\bibitem{ADR7}
+L.C.Godara, {\it Smart Antennas}, 2004, CRC Press.
+
+\bibitem{ADR8}
+H. L. Van Trees, {\it Optimum Array Processing,} Wiley, NY, 2002.
+
+\bibitem{ADR6}
+Ifeachor, Emmanuel C., and Barrie W. Jervis. {\it Adaptive Digital Filters. Digital Signal Processing: A Practical Approach.} Second ed. Harlow, England: Prentice Hall, 2002. 650-660. Print.
+
+\bibitem{ADR3}
+Das, S., {\enquote{ Smart antenna design for wireless communication using adaptive beam-forming approach,}} {\it TENCON 2008 - 2008 IEEE Region 10 Conference} , vol., no., pp.1,5, 19-21 Nov. 2008.
+
+
+
+\end{thebibliography}
+
+\end{document} 

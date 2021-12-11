@@ -1,0 +1,37 @@
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Methodology}
+\lhead{Chapter 3}
+\lfoot{\footnotesize{MES COE, B.E. COMPUTER YEAR 2021-22}}
+\rfoot{\thepage}
+\chapter{Methodology}
+
+\section{Modelling}
+
+\hspace*{1cm} Here,we have simulated sample-by sample adaptive beam-former using least mean square (LMS) algorithm and constant modulus algorithm (CMA). The weight vector W is calculated using the statistics of signal x(t) arriving from the antenna array.
+ An adaptive processor will minimize the error e(t) between a desired signal d(t) and the array output y(t) \cite{ADR3}.
+
+
+
+\section{Least Mean Squares}
+
+\hspace*{1cm}
+LMS algorithm uses steepest decent method, the output of the steepest decent method is as follows \cite{ADR6} :\\
+\vspace*{-1cm}
+
+\begin{equation}
+ W(n+1) = W(n)+2\mu E[e(t) x(t)] 
+\end{equation}
+
+
+\noindent
+where,  $\mu$ is a gain constant and controls the rate of adaptation. Step size $\mu$  should be chosen in a range in which convergence is ensured  \cite{ADR2}, as,\\
+\begin{equation*}
+0 < \mu < \frac{2} {\lambda_{max}}
+\end{equation*}
+where, $\lambda_{max}$ is the largest eigen value of correlation matrix {\emph{R}.\\
+Equation (3.1) is the equation of the LMS algorithm \cite{ADR6}.
+The weights obtained by the LMS algorithm are only the estimates, but these estimates improve gradually with time as the weights are adjusted for more samples and the filter learns the characteristics of the signals.In practice weight vector 'w' never reaches the theoretical optimum (the Wiener solution i.e. $w_{opt}$), but fluctuates about it.
+
+
+

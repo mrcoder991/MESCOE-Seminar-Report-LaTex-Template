@@ -1,0 +1,3 @@
+Report_Latex_Template Description:
+
+"my_title.tex" is the front page, "my_certf.tex" is the certificate page, "chap1.tex" is chapter 1, "chap2.tex" is chapter 2 and so on. To make changes in the content of these, edit the respective tex files and save them, but do not run them. These files are called in the "sem_report.tex" file. So after making the changes in the respective files, run the "sem_report.tex" file to observe the changes in the PDF generated.
